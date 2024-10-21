@@ -1,0 +1,529 @@
+/* start variables */
+:root {
+    --main-color: #ceddee;
+    --secondery-color: #10243b;
+}
+
+/*end varianlesd*/
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Work Sans", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/*Start Components*/
+
+.special-heading {
+    color: #bad3ef;
+    font-size: 100px;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: -3px;
+    margin: 0;
+}
+
+.special-heading+p {
+    margin: -30px 0 0;
+    font-size: 20px;
+    text-align: center;
+    color: #5e87ba;
+
+}
+
+@media (max-width: 767px) {
+    .special-heading {
+        font-size: 60px;
+
+    }
+
+    .special-heading+p {
+        margin-top: -20px;
+
+    }
+
+}
+
+/*End Components*/
+
+
+/* Start Header */
+
+.header {
+    margin: 0;
+    padding: 20px;
+
+
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo {
+    width: 60px;
+}
+
+.header .links {
+    position: relative;
+
+}
+
+.header .links:hover .icon span:nth-child(2) {
+    width: 100%;
+}
+
+.header .links .icon {
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+
+}
+
+.header .links .icon span {
+    background-color: #333;
+    margin-bottom: 5px;
+}
+
+.header .links .icon span:first-child {
+    height: 2px;
+    width: 100%;
+    border-radius: 2px;
+}
+
+.header .links .icon span:nth-child(2) {
+    height: 2px;
+    width: 60%;
+    transition: 0.3s;
+    border-radius: 2px;
+
+}
+
+.header .links .icon span:nth-child(3) {
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+
+}
+
+.header .links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f6f6;
+    position: absolute;
+    right: 0;
+    min-width: 200px;
+    top: calc(100% + 15px);
+    display: none;
+    z-index: 1;
+}
+
+.header .links ul::before {
+    content: '';
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #f6f6f6 transparent;
+    position: absolute;
+    right: 5px;
+    top: -20px;
+}
+
+.header .links:hover ul {
+    display: block;
+}
+
+.header .links ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #333;
+    transition: 0.3s;
+}
+
+/* hvi bch (a) tmchi chwya 3el left*/
+.header .links ul li a:hover {
+    padding-left: 25px;
+}
+
+/* es bedeutet,dass die letzten child mtsirch 3lih fza  */
+.header .links ul li:not(:last-child) a {
+    border-bottom: 1px solid;
+}
+
+
+/*End Header */
+
+
+/*Start Landing*/
+.landing {
+    background-image: url(./assets/image.jpg);
+    background-size: cover;
+    height: calc(100vh - 104px);
+    position: relative;
+}
+
+.landing .intro-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    max-width: 100%;
+}
+
+
+.landing .intro-text h1 {
+    margin: 0;
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.landing .intro-text p {
+    font-size: 19px;
+    line-height: 1.8;
+    color: #ceddee;
+}
+
+
+
+
+/* End Landing*/
+
+/*Start Features*/
+.features {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #5f91c9;
+}
+
+.features .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+    width: 80%;
+    margin: auto;
+}
+
+.features .feat {
+    padding: 20px;
+    text-align: center;
+}
+
+
+.features .feat h3 {
+    font-weight: 800;
+    margin: 30px 0;
+
+}
+
+.features .feat p {
+    line-height: 1.8;
+    color: #2d1320;
+}
+
+/* End Features*/
+
+/*Start services*/
+.services {
+    background-color: white;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.services .services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    width: 80%;
+    margin: 100px auto;
+}
+
+.services .services-container .srv {
+    display: flex;
+    margin: 0 0 60px 40px;
+}
+
+/*End Services*/
+
+@media (max-width: 767px) {
+    .services .services-container .srv {
+        flex-direction: column;
+        text-align: center;
+        position: relative;
+        width: 90%;
+        margin: auto;
+
+    }
+
+    .services .services-container .srv img {
+        position: relative;
+        left: 80px;
+
+    }
+}
+
+.services .srv img {
+    width: 60px;
+    margin: 20px;
+}
+
+.services .services-container .srv .text {
+    flex: 1;
+    text-align: center;
+
+
+}
+
+.services .services-container .srv .text h3 {
+    margin: 0 0 20px;
+
+}
+
+.services .services-container .srv .text p {
+    color: #2d1320;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.services .services-container .image {
+    text-align: center;
+    position: relative;
+}
+
+.services .services-container .image::before {
+    content: " ";
+    background-color: var(--secondery-color);
+    width: 100px;
+    height: calc(100% + 100px);
+    top: -50px;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+
+}
+
+.services .services-container .image img {
+    width: 260px;
+}
+
+@media (max-width:1190px) {
+    .services .services-container .image img {
+        display: none;
+    }
+
+    .services .services-container .image {
+        display: none;
+    }
+
+    .services .services-container .srv {
+        text-align: center;
+    }
+
+}
+
+/*start portfolio*/
+.portfolio {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #f6f6f6;
+}
+
+.portfolio .portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    width: 90%;
+    margin: 100px auto;
+}
+
+.portfolio .portfolio-container .card {
+    background-color: white;
+    border-radius: 5px;
+}
+
+.portfolio .portfolio-container .card img {
+    width: 100%;
+}
+
+.portfolio .portfolio-container .card .info {
+    padding: 20px;
+}
+
+.portfolio .portfolio-container .card .info h2 {
+    margin: 0px;
+}
+
+.portfolio .portfolio-container .card .info p {
+    color: #2d1320;
+    line-height: 1.6;
+}
+
+/*end portfolio*/
+
+/*start about*/
+.about {
+    padding-top: 60px;
+    padding-bottom: 120px;
+}
+
+.about .about-container {
+    width: 90%;
+    margin: 100px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+@media (max-width: 991px) {
+    .about .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about .container .about-container .image::before,
+    .about .container .about-container .image::after {
+        display: none;
+    }
+
+    .about .container .about-container .image {
+        margin: 0 auto 60px;
+    }
+
+}
+
+.about .container .about-container .image {
+    position: relative;
+    width: 252px;
+    height: 375px;
+}
+
+.about .container .about-container .image::before {
+    content: "";
+    position: absolute;
+    background-color: #f6f6f6;
+    width: 100px;
+    height: calc(100% + 80px);
+    top: -50px;
+    left: -20px;
+    z-index: -1;
+}
+
+
+.about .container .about-container .image::after {
+    top: -40px;
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 300px;
+    border-left: 80px solid #5e87ba;
+    border-bottom: 80px solid #5e87ba;
+    z-index: -1;
+    right: -150px;
+}
+
+.about .container .about-container .image img {
+    max-width: 100%;
+}
+
+.about .container .about-container .text {
+    flex-basis: calc(100% - 500px);
+
+}
+
+.about .container .about-container .text p:first-of-type {
+    font-weight: bold;
+    line-height: 2;
+    margin-bottom: 50px;
+
+}
+
+.about .container .about-container .text hr {
+    width: 50%;
+    display: inline-block;
+    border-color: #10243b;
+}
+
+.about .container .about-container .text p:last-of-type {
+    line-height: 2;
+    color: #5f91c9;
+}
+
+/*end about*/
+
+/*start Contact*/
+
+.contact {
+    padding-top: 60px;
+    padding-bottom: 120px;
+    background-color: #f6f6f6;
+
+}
+
+.contact .info {
+    padding-top: 60px;
+    padding-bottom: 120px;
+    text-align: center;
+}
+
+.contact .info .label {
+    font-size: 35px;
+    font-weight: 800;
+    color: #2161af;
+    letter-spacing: -2px;
+    margin-bottom: 15px;
+}
+
+.contact .info .link {
+    display: block;
+    font-size: 35px;
+    font-weight: 800;
+    color: #333;
+}
+
+.contact .info .social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.contact .info .social img {
+    width: 40px;
+    margin-left: 15px;
+}
+
+@media (max-width: 700px) {
+
+    .contact .info .label,
+    .contact .info .link {
+        font-size: 25px;
+    }
+}
+
+
+/*End Contact*/
+.footer {
+    background-color: #0b2d56;
+    color: #736b70;
+    padding: 30px 10px;
+    font-size: 18px;
+    text-align: center;
+
+}
+
+.footer span {
+    font-weight: bold;
+    color: blue;
+}
